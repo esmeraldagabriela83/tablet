@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  html {
+    font-family: 'Nunito Sans', sans-serif;
+  }
+
+  /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*https://www.w3schools.com/css/css_rwd_mediaqueries.asp*/
+  @media only screen and (max-width: 419px) {
+    body{
+        background-color: aliceblue;
+    }
+    .container{
+        color:gray;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 420px) and (max-width: 1023px) {
+    body{
+        background-color: HoneyDew;
+    }
+    .container{
+        color:SlateGray;
+        font-size: 1.3rem;
+        text-align: center;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    body{
+        background-color: Ivory;
+    }
+    .container{
+        color:darkgray;
+        font-size: 1.2rem;
+    }
+    .container:hover{
+        color:dimgray;
+        transition-delay: 0.5s;
+    }
+  }
+
+
+  /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+nav , button{
+    box-shadow: 1px 1px 3px #888888;
+}
+
+/*logo*/
+nav strong{
+    color:dimgray;
+}
+
+/*img index page*/
+
+img {
+    margin-top: -30%;
+}
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card{
+  margin-top:3em;
+  margin-bottom:3em;
+  margin-left:2.5em;
+  margin-right:2.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -4,17 +4,137 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>index.html</title>
+
+
+    <!-- google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+
+    <!-- google fonts -->
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  </head>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+
+
   <body>
 
-<div class="container">
-  hjjkj
-</div>
+    <!-- https://getbootstrap.com/docs/5.2/components/scrollspy/#how-it-works -->
 
-  
+    <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+        <a class="navbar-brand" href="#"><strong>Tablet</strong><br><strong>Project</strong></a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">Pills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Second</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Info</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#scrollspyHeading3">Third</a></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading4">Fourth</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#scrollspyHeading5">Fifth</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
 
-  
+      <a href="https://www.pexels.com/ro-ro/fotografie/abstract-imagini-abstracte-vitamine-farmacie-3683056/"  target="_blank">
+        <img src="./images/pills_index.jpg" class="img-fluid" alt="index_image_pills" id="img_index">
+      </a>
+
+      <div class="container">
+
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0">
+            
+            <h4 id="scrollspyHeading1">Pills</h4>
+
+
+
+          <div id="pills_container"  style="padding:0.5em ;
+                                            margin:0.5em ; 
+                                            
+                                            background-color:MistyRose;
+                                            display:flex ; align-items:center ; justify-content:center; flex-wrap:wrap"></div>
+
+
+<div id="pills_containerEndocrine"  style="padding:0.5em ;
+margin:0.5em ; 
+background-color:yellow;
+display:flex ; align-items:center ; justify-content:center; flex-wrap:wrap"></div>
+
+<div id="pills_containerSkin"  style="padding:0.5em ;
+margin:0.5em ; 
+background-color:gray;
+display:flex ; align-items:center ; justify-content:center; flex-wrap:wrap"></div>
+
+          <button type="button" class="btn btn-primary mb-3 mt-3" id="showAllPillsBtn">Show all pills</button><br>
+
+          <button type="button" class="btn btn-secondary mb-3 mt-3"  id="endocrineProblemsBtn">Find pills for endocrine problems </button>
+
+          <button type="button" class="btn btn-secondary mb-3 mt-3"  id="skinProblemsBtn">Find pills for skin problems</button>
+
+          <button type="button" class="btn btn-secondary mb-3 mt-3"  id="infectionProblemsBtn">Find pills for infections problems</button><br>
+
+          <button  type="button" class="btn btn-success mb-3 mt-3" id="yesStockBtn">In stock</button>
+          <button  type="button" class="btn btn-danger mb-3 mt-3" id="noStockBtn">No stock</button><br>
+
+          <button type="button" class="btn btn-secondary mb-3 mt-3"  id="alphabeticalSortBtn">arrange in alphabetical order</button>
+
+          <button type="button" class="btn btn-warning mb-3 mt-3"  id="sortByPriceBtn">Sort by price</button>
+
+
+
+
+            <h4 id="scrollspyHeading2">Second heading</h4>
+            <p>
+                2 This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+    
+                This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+            </p>
+            <h4 id="scrollspyHeading3">Third heading</h4>
+            <p>
+               3 This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+    
+                This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+            </p>
+            <h4 id="scrollspyHeading4">Fourth heading</h4>
+            <p>
+                4 This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+    
+                This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+            </p>
+            <h4 id="scrollspyHeading5">Fifth heading</h4>
+            <p>
+                5 This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+    
+                This is some placeholder content for the scrollspy page. Note that as you scroll down the page, the appropriate navigation link is highlighted. 
+                It's repeated throughout the component example. We keep adding some more example copy here to emphasize the scrolling and highlighting.
+            </p>
+          </div>
+
+      </div>
+
+    <!-- https://getbootstrap.com/docs/5.2/components/scrollspy/#how-it-works -->
+
+
+    <div>
+        content page
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
