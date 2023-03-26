@@ -16,10 +16,16 @@
     body{
         background-color: aliceblue;
     }
+
     .container{
         color:gray;
         font-size: 1.4rem;
         text-align: center;
+    }
+
+    hr{
+      margin-bottom:1em;
+      width:1000%;
     }
   }
 
@@ -27,17 +33,24 @@
     body{
         background-color: HoneyDew;
     }
+
     .container{
         color:SlateGray;
         font-size: 1.3rem;
         text-align: center;
     }
+
+    hr{
+      margin-bottom:1em;
+      width:100%;
+        }
   }
 
   @media only screen and (min-width: 1024px) {
     body{
         background-color: Ivory;
     }
+
     .container{
         color:darkgray;
         font-size: 1.2rem;
@@ -45,6 +58,12 @@
     .container:hover{
         color:dimgray;
         transition-delay: 0.5s;
+    }
+
+    hr{
+      margin-bottom:1em;
+      width:50%;
+      margin-left:0
     }
   }
 
@@ -73,7 +92,8 @@ img {
   margin-right:2.5em;
 }
 
-
+/*hr pt separare    style="width:50%;text-align:left;margin-left:0"   */
+/*https://www.w3schools.com/tags/tag_hr.asp*/
 
 
 

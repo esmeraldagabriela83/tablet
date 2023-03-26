@@ -95,8 +95,8 @@ const pills=[
         "activeOn":"skin problems",
         "imgPill":"./images/agents.jpg",
         "linkImg":"https://images.pexels.com/photos/4040573/pexels-photo-4040573.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "inventory":"yes",
-        "color":"#198754",
+        "inventory":"no",
+        "color":"#FFC107",
         "price":750,
         "activeSubstance":"desloughing agents"
       },
@@ -119,7 +119,7 @@ const pills=[
         "linkImg":"https://images.pexels.com/photos/4046997/pexels-photo-4046997.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "inventory":"yes",
         "color":"#198754",
-        "price":5780,
+        "price":6500,
         "activeSubstance":"antifungals"
       },
       {
@@ -130,7 +130,7 @@ const pills=[
         "linkImg":"https://images.pexels.com/photos/4210612/pexels-photo-4210612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "inventory":"yes",
         "color":"#198754",
-        "price":5780,
+        "price":9500,
         "activeSubstance":"antitoxins"
       },
       {
@@ -161,16 +161,49 @@ console.log("pills length" , pills.length);
 
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+const pillsToShowAll=[...pills];
+console.log("pillsToShowAll.length is : " , pillsToShowAll.length);
+
+//---
+
+const pillsEndocrine=[...pills];
+console.log("pillsEndocrine.length is : " , pillsEndocrine.length);
+
+//--
+
+const pillsSkin=[...pills];
+console.log("pillsSkin.length is :" , pillsSkin.length);
+
+//----
+
+const pillsInfection=[...pills];
+console.log("pillsInfection.length" , pillsInfection.length);
+
+//---
+const pillsInStock=[...pills];
+console.log("pillsInStock is : " , pillsInStock);
+
+//----
+
+const pillsNoStock=[...pills];
+console.log("pillsNoStock is : " , pillsNoStock);
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 const pills_container=document.getElementById("pills_container");
-pills_container.style.border="3px solid red";
+// pills_container.style.border="3px solid red";
 
 
 
-
-let pillsArr=[];
 let pillsContent=``;
+let pillsContentEndocrine=``;
+let pillsContentSkin=``;
+let pillsContentInfection=``;
+
+let pillsInStockContent=``;
+let pillsNoStockContent=``;
 
 //--show all pills
+
 
 const showAllPillsBtn=document.getElementById("showAllPillsBtn");
 
@@ -179,7 +212,7 @@ showAllPillsBtn.addEventListener("click" , function(event){
     console.log("you clicked the show all pills btn");
 
     //---
-    pills.forEach(showAllCallBackFunc);
+    pillsToShowAll.forEach(showAllCallBackFunc);
 
     function showAllCallBackFunc(pillItem){
         pillsContent +=`
@@ -189,9 +222,11 @@ showAllPillsBtn.addEventListener("click" , function(event){
                 <h5 class="card-title" style="color:${pillItem.color}">${pillItem.title}</h>
                 <h5 class="card-title">Price: ${pillItem.price}</h5>
                 <h5 class="card-title">Active ingredient: ${pillItem.activeSubstance}</h5>
-               
-                <a href="https://en.wikipedia.org/wiki/Medication"  target="_blank" class="btn btn-primary">Source</a><br></br>
-                <a href="${pillItem.linkImg}"  target="_blank" class="btn btn-primary">Pexels image source</a>
+                <h6 class="card-title">It is for : ${pillItem.activeOn}</h6>
+                <a href="${pillItem.linkImg}" 
+                   style="box-shadow: 1px 1px 3px #888888"
+                   target="_blank" 
+                   class="btn btn-primary">Pexels image source</a>
             </div>
         </div>
         `;
@@ -201,103 +236,213 @@ pills_container.innerHTML=pillsContent;
 
 });
 
-//--show endocrine
 
-//--
+//show endocrine-------------------------------------------------------------------------------------------------------------------------------
+
+
 const pills_containerEndocrine=document.getElementById("pills_containerEndocrine");
-pills_containerEndocrine.style.border="3px solid green";
-
-let pillsContentEndocrine=``;
 
 const endocrineProblemsBtn=document.getElementById("endocrineProblemsBtn");
 endocrineProblemsBtn.addEventListener("click" , function(event){
-    event.preventDefault();
-    console.log("you clicked the endocrine btn");
+  event.preventDefault();
+  console.log("endocrine btn clicked");
 
-    //---
-    const endocrinePills=pills.filter(endocrineCBfunction);
+  //--
+  const filterEndocrine=pillsEndocrine.filter(filterCBfunc);
 
-    function endocrineCBfunction(pillItem){
-        return pillItem.activeOn === "endocrine problems";
-    }
+  function filterCBfunc(pillItem , index){
+    return pillItem.activeOn === "endocrine problems";
+  }
 
-    console.log("endocrinePills is " , endocrinePills);
-    //---
-
-    for(let i=0 ; i<endocrinePills.length ; i++){
-        pillsContentEndocrine +=`
-        <div class="card" style="width: 18rem">
-            <img src="${endocrinePills[i].imgPill}" class="card-img-top" alt="pill_item_img">
-            <div class="card-body">
-                <h5 class="card-title" style="color:${endocrinePills[i].color}">${endocrinePills[i].title}</h>
-                <h5 class="card-title">Price: ${endocrinePills[i].price}</h5>
-                <h5 class="card-title">Active ingredient: ${endocrinePills[i].activeSubstance}</h5>
-               
-                <a href="https://en.wikipedia.org/wiki/Medication"  target="_blank" class="btn btn-primary">Source</a><br></br>
-                <a href="${endocrinePills[i].linkImg}"  target="_blank" class="btn btn-primary">Pexels image source</a>
-            </div>
+  console.log("filterEndocrine is : " , filterEndocrine);
+  //--
+  for(let i=0 ; i<filterEndocrine.length ; i++){
+    pillsContentEndocrine +=`
+    <div class="card" style="width: 18rem">
+        <img src="${filterEndocrine[i].imgPill}" class="card-img-top" alt="pill_item_img">
+        <div class="card-body">
+            <h5 class="card-title" style="color:${filterEndocrine[i].color}">${filterEndocrine[i].title}</h>
+            <h5 class="card-title">Price: ${filterEndocrine[i].price}</h5>
+            <h5 class="card-title">Active ingredient: ${filterEndocrine[i].activeSubstance}</h5>
+            <h6 class="card-title">It is for : ${filterEndocrine[i].activeOn}</h6>
+            <a href="${filterEndocrine[i].linkImg}" 
+               style="box-shadow: 1px 1px 3px #888888"
+               target="_blank" 
+               class="btn btn-primary">Pexels image source</a>
         </div>
-        `;
-    }
-    //--
-    pills_containerEndocrine.innerHTML=pillsContentEndocrine;
+    </div>
+    `;
+  }
+
+pills_containerEndocrine.innerHTML=pillsContentEndocrine;
+  //---
 });
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+//show skin
 
-///---show skin
-
-//--
 const pills_containerSkin=document.getElementById("pills_containerSkin");
-pills_containerSkin.style.border="3px solid magenta";
 
-let pillsContentSkin=``;
+const skinProblemsBtn=document.getElementById("skinProblemsBtn");
+skinProblemsBtn.addEventListener("click" , function(event){
+  event.preventDefault();
+  console.log("skin btn clicked");
+  //----
+  const filterSkin=pillsEndocrine.filter(filterCBfunc)
 
-const skinProblemsBtn=document.addEventListener("click" , function(event){
-    event.preventDefault();
-    console.log("skin btn");
-
-    //---
-
-const skinPills=pills.filter(skinCBfunc);
-
-function skinCBfunc(pillItem){
+  function filterCBfunc(pillItem , index){
     return pillItem.activeOn === "skin problems";
-}
+  }
 
-console.log("skinPills is : " , skinPills);
-    //---
-
-    for(let i=0 ; i<skinPills.length ; i++){
-        pillsContentSkin +=`
-        <div class="card" style="width: 18rem">
-            <img src="${skinPills[i].imgPill}" class="card-img-top" alt="pill_item_img">
-            <div class="card-body">
-                <h5 class="card-title" style="color:${skinPills[i].color}">${skinPills[i].title}</h>
-                <h5 class="card-title">Price: ${skinPills[i].price}</h5>
-                <h5 class="card-title">Active ingredient: ${skinPills[i].activeSubstance}</h5>
-               
-                <a href="https://en.wikipedia.org/wiki/Medication"  target="_blank" class="btn btn-primary">Source</a><br></br>
-                <a href="${skinPills[i].linkImg}"  target="_blank" class="btn btn-primary">Pexels image source</a>
-            </div>
+  console.log("filterSkin is : " , filterSkin);
+  //----
+  for(let i=0 ; i<filterSkin.length ; i++){
+    pillsContentSkin +=`
+    <div class="card" style="width: 18rem">
+        <img src="${filterSkin[i].imgPill}" class="card-img-top" alt="pill_item_img">
+        <div class="card-body">
+            <h5 class="card-title" style="color:${filterSkin[i].color}">${filterSkin[i].title}</h>
+            <h5 class="card-title">Price: ${filterSkin[i].price}</h5>
+            <h5 class="card-title">Active ingredient: ${filterSkin[i].activeSubstance}</h5>
+            <h6 class="card-title">It is for : ${filterSkin[i].activeOn}</h6>
+            <a href="${filterSkin[i].linkImg}" 
+               style="box-shadow: 1px 1px 3px #888888"
+               target="_blank" 
+               class="btn btn-primary">Pexels image source</a>
         </div>
-        `;
-    }
-    //--
-    pills_containerSkin.innerHTML=pillsContentSkin;
+    </div>
+    `;
+  }
+  //----
+  pills_containerSkin.innerHTML=pillsContentSkin;
+  //----
+});
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//show infection
+
+const pills_containerInfection=document.getElementById("pills_containerInfection");
+
+const infectionProblemsBtn=document.getElementById("infectionProblemsBtn");
+infectionProblemsBtn.addEventListener("click" , function(event){
+  event.preventDefault();
+  console.log("infection btn clicked");
+  //----
+  const filterInfection=pillsInfection.filter(filterCBfunc)
+
+  function filterCBfunc(pillItem , index){
+    return pillItem.activeOn === "infection problems";
+  }
+  console.log("filterInfection is : " , filterInfection);
+  //----
+  for(let i=0 ; i<filterInfection.length ; i++){
+    pillsContentInfection +=`
+    <div class="card" style="width: 18rem">
+        <img src="${filterInfection[i].imgPill}" class="card-img-top" alt="pill_item_img">
+        <div class="card-body">
+            <h5 class="card-title" style="color:${filterInfection[i].color}">${filterInfection[i].title}</h>
+            <h5 class="card-title">Price: ${filterInfection[i].price}</h5>
+            <h5 class="card-title">Active ingredient: ${filterInfection[i].activeSubstance}</h5>
+            <h6 class="card-title">It is for : ${filterInfection[i].activeOn}</h6>
+            <a href="${filterInfection[i].linkImg}"  
+               style="box-shadow: 1px 1px 3px #888888"
+               target="_blank" 
+               class="btn btn-primary">Pexels image source</a>
+        </div>
+    </div>
+    `;
+  }
+  //----
+  pills_containerInfection.innerHTML=pillsContentInfection;
+  //----
 });
 
 
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//yes in stock
 
+const yesStockBtn=document.getElementById("yesStockBtn");
 
+const inStockDivContent=document.querySelector(".inStockDivContent");
 
+yesStockBtn.addEventListener("click" , function(event){
+  event.preventDefault();
+  console.log("yes stock btn");
 
+  //---
+  const filterStockArr=pillsInStock.filter(filterYesStockCB);
 
+  function filterYesStockCB(pillItem , index){
+   return pillItem.inventory === "yes";
+  }
 
+  console.log("filterStockArr is : " , filterStockArr);
+  //---
+  for(let i=0 ; i<filterStockArr.length ; i++){
+    pillsInStockContent +=`
+    <div class="card" style="width: 18rem">
+        <img src="${filterStockArr[i].imgPill}" class="card-img-top" alt="pill_item_img">
+        <div class="card-body">
+            <h5 class="card-title" style="color:${filterStockArr[i].color}">${filterStockArr[i].title}</h>
+            <h5 class="card-title">Price: ${filterStockArr[i].price}</h5>
+            <h5 class="card-title">Active ingredient: ${filterStockArr[i].activeSubstance}</h5>
+            <h6 class="card-title">It is for : ${filterStockArr[i].activeOn}</h6>
+            <a href="${filterStockArr[i].linkImg}"  
+               style="box-shadow: 1px 1px 3px #888888"
+               target="_blank" 
+               class="btn btn-primary">Pexels image source</a>
+        </div>
+    </div>
+    `;
+  }
+  //---
+  inStockDivContent.innerHTML=pillsInStockContent;
+  //---
+});
 
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//no stock
 
+const noStockBtn=document.getElementById("noStockBtn");
 
+const noStockDivContent=document.querySelector(".noStockDivContent");
+
+noStockBtn.addEventListener("click" , function(event){
+  event.preventDefault();
+  console.log("no stock btn");
+
+  //---
+  const filterNoStockArr=pillsNoStock.filter(filterNoStockCB);
+
+  function filterNoStockCB(pillItem , index){
+    return pillItem.inventory === "no";
+  }
+
+  console.log("filterNoStockArr is : " , filterNoStockArr);
+  //---
+  for(let i=0 ; i<filterNoStockArr.length ; i++){
+    pillsNoStockContent +=`
+    <div class="card" style="width: 18rem">
+        <img src="${filterNoStockArr[i].imgPill}" class="card-img-top" alt="pill_item_img">
+        <div class="card-body">
+            <h5 class="card-title" style="color:${filterNoStockArr[i].color}">${filterNoStockArr[i].title}</h>
+            <h5 class="card-title">Price: ${filterNoStockArr[i].price}</h5>
+            <h5 class="card-title">Active ingredient: ${filterNoStockArr[i].activeSubstance}</h5>
+            <h6 class="card-title">It is for : ${filterNoStockArr[i].activeOn}</h6>
+            <a href="${filterNoStockArr[i].linkImg}"  
+               style="box-shadow: 1px 1px 3px #888888"
+               target="_blank" 
+               class="btn btn-primary">Pexels image source</a>
+        </div>
+    </div>
+    `;
+  }
+  //---
+  noStockDivContent.innerHTML=pillsNoStockContent;
+  //----
+});
 
 
 
