@@ -31,6 +31,8 @@
     <!-- https://getbootstrap.com/docs/5.2/components/scrollspy/#how-it-works -->
 
     <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+
+      <div class="container">
         <a class="navbar-brand" href="index.html"><strong>Tablet</strong><br><strong>Project</strong></a>
         <ul class="nav nav-pills">
           <li class="nav-item">
@@ -60,17 +62,22 @@
           </li>
 
         </ul>
+      </div>
+        
       </nav>
 
       <a href="https://www.pexels.com/ro-ro/fotografie/abstract-imagini-abstracte-vitamine-farmacie-3683056/"  target="_blank">
         <img src="./images/pills_index.jpg" class="img-fluid" alt="index_image_pills" id="img_index">
       </a>
 
+    
       <div class="container">
 
         <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example p-3 rounded-2" tabindex="0">
             
             <h4 id="scrollspyHeading1">Pills</h4>
+
+            
         
           <!-- show all -->
 
@@ -171,23 +178,102 @@
             </p>
 
 
+           
+            <!-- toasts -->
+            <button type="button" class="btn btn-primary my-3" id="liveToastBtn">Show insulin info</button><br>
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  
+                  <strong class="me-auto">Insulin</strong>
+                  
+                  <!-- <small>11 mins ago</small> -->
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+
+                </div>
+                <div class="toast-body" style="height:auto">
+                  
+                  <p>
+                    Insulin from Latin insula, 'island' is a peptide hormone produced by beta cells of the pancreatic islets encoded in humans by the INS gene.
+                  </p>
+                  <!-- <img src="./images/insulin.jpg" class="rounded" alt="pill_img_toast" style="width:50%"> -->
+
+                </div>
+              </div>
+            </div>
+            <!-- toasts -->
+
+          <hr>
+            
+            <!-- toasts -->
+            <button type="button" class="btn btn-primary my-3" id="liveToastBtnAntibiotics">Show antibiotics info</button>
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div id="liveToastAntibiotics" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                  
+                  <strong class="me-auto">Antibiotics</strong>
+                  
+                  <!-- <small>11 mins ago</small> -->
+                  <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+
+                </div>
+                <div class="toast-body" style="height:auto">
+                  
+                  <p>
+                    An antibiotic is a type of antimicrobial substance active against bacteria.
+                  </p>
+                  <!-- <img src="./images/insulin.jpg" class="rounded" alt="pill_img_toast" style="width:50%"> -->
+
+                </div>
+              </div>
+            </div>
+            <!-- toasts -->
+
+                   
             <h4 id="scrollspyHeading4">History</h4>
             <p>
             <strong>Prescription drug history</strong><br>
-            Antibiotics first arrived on the medical scene in 1932 thanks to Gerhard Domagk;[29] and were coined the "wonder drugs". The introduction of the sulfa drugs led to the mortality rate from pneumonia in the U.S. to drop from 0.2% each year to 0.05% by 1939.[30] Antibiotics inhibit the growth or the metabolic activities of bacteria and other microorganisms by a chemical substance of microbial origin. Penicillin, introduced a few years later, provided a broader spectrum of activity compared to sulfa drugs and reduced side effects. Streptomycin, found in 1942, proved to be the first drug effective against the cause of tuberculosis and also came to be the best known of a long series of important antibiotics. A second generation of antibiotics was introduced in the 1940s: aureomycin and chloramphenicol. Aureomycin was the best known of the second generation.
 
-            <br>Lithium was discovered in the 19th century for nervous disorders and its possible mood-stabilizing or prophylactic effect; it was cheap and easily produced. As lithium fell out of favor in France, valpromide came into play. This antibiotic was the origin of the drug that eventually created the mood stabilizer category. Valpromide had distinct psychotrophic effects that were of benefit in both the treatment of acute manic states and in the maintenance treatment of manic depression illness. Psychotropics can either be sedative or stimulant; sedatives aim at damping down the extremes of behavior. Stimulants aim at restoring normality by increasing tone. Soon arose the notion of a tranquilizer which was quite different from any sedative or stimulant. The term tranquilizer took over the notions of sedatives and became the dominant term in the West through the 1980s. In Japan, during this time, the term tranquilizer produced the notion of a psyche-stabilizer and the term mood stabilizer vanished.[31]
-
-            <br>Premarin (conjugated estrogens, introduced in 1942) and Prempro (a combination estrogen-progestin pill, introduced in 1995) dominated the hormone replacement therapy (HRT) during the 1990s. HRT is not a life-saving drug, nor does it cure any disease. HRT has been prescribed to improve one's quality of life. Doctors prescribe estrogen for their older female patients both to treat short-term menopausal symptoms and to prevent long-term diseases. In the 1960s and early 1970s, more and more physicians began to prescribe estrogen for their female patients. between 1991 and 1999, Premarin was listed as the most popular prescription and best-selling drug in America.[31]
-
-            <br>The first oral contraceptive, Enovid, was approved by FDA in 1960. Oral contraceptives inhibit ovulation and so prevent conception. Enovid was known to be much more effective than alternatives including the condom and the diaphragm. As early as 1960, oral contraceptives were available in several different strengths by every manufacturer. In the 1980s and 1990s, an increasing number of options arose including, most recently, a new delivery system for the oral contraceptive via a transdermal patch. In 1982, a new version of the Pill was introduced, known as the "biphasic" pill. By 1985, a new triphasic pill was approved. Physicians began to think of the Pill as an excellent means of birth control for young women.[31]
-
-            <br>Stimulants such as Ritalin (methylphenidate) came to be pervasive tools for behavior management and modification in young children. Ritalin was first marketed in 1955 for narcolepsy; its potential users were middle-aged and the elderly. It wasn't until some time in the 1980s along with hyperactivity in children that Ritalin came onto the market. Medical use of methlyphenidate is predominantly for symptoms of attention deficit/hyperactivity disorder (ADHD). Consumption of methylphenidate in the U.S. out-paced all other countries between 1991 and 1999. Significant growth in consumption was also evident in Canada, New Zealand, Australia, and Norway. Currently, 85% of the world's methylphenidate is consumed in America.[31]
-
-            <br>The first minor tranquilizer was Meprobamate. Only fourteen months after it was made available, meprobamate had become the country's largest-selling prescription drug. By 1957, meprobamate had become the fastest-growing drug in history. The popularity of meprobamate paved the way for Librium and Valium, two minor tranquilizers that belonged to a new chemical class of drugs called the benzodiazepines. These were drugs that worked chiefly as anti-anxiety agents and muscle relaxants. The first benzodiazepine was Librium. Three months after it was approved, Librium had become the most prescribed tranquilizer in the nation. Three years later, Valium hit the shelves and was ten times more effective as a muscle relaxant and anti-convulsant. Valium was the most versatile of the minor tranquilizers. Later came the widespread adoption of major tranquilizers such as chlorpromazine and the drug reserpine. In 1970, sales began to decline for Valium and Librium, but sales of new and improved tranquilizers, such as Xanax, introduced in 1981 for the newly created diagnosis of panic disorder, soared.[31]
-
-            <br>Mevacor (lovastatin) is the first and most influential statin in the American market. The 1991 launch of Pravachol (pravastatin), the second available in the United States, and the release of Zocor (simvastatin) made Mevacor no longer the only statin on the market. In 1998, Viagra was released as a treatment for erectile dysfunction.[31]
+            Historians write in the context of their own time, and with due regard to the current dominant ideas of how to interpret the past, and sometimes write to provide lessons for their own society. In the words of Benedetto Croce, "All history is contemporary history". History is facilitated by the formation of a "true discourse of past" through the production of narrative and analysis of past events relating to the human race.[22] <br>
+            The modern discipline of history is dedicated to the institutional production of this discourse.
+           
             </p>
+
+
+
+            <!-- collapse -->
+            <p>
+              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Antibiotics</a>
+              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Lithium</button>
+              <button class="btn btn-primary" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target=".multi-collapse" 
+                      aria-expanded="false" 
+                      aria-controls="multiCollapseExample1 multiCollapseExample2">Antibiotics and Lithium</button>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                  <div class="card card-body">
+                  Antibiotics first arrived on the medical scene in 1932 thanks to Gerhard Domagk;[29] and were coined the "wonder drugs". The introduction of the sulfa drugs led to the mortality rate from pneumonia in the U.S. to drop from 0.2% each year to 0.05% by 1939.[30] Antibiotics inhibit the growth or the metabolic activities of bacteria and other microorganisms by a chemical substance of microbial origin. Penicillin, introduced a few years later, provided a broader spectrum of activity compared to sulfa drugs and reduced side effects. Streptomycin, found in 1942, proved to be the first drug effective against the cause of tuberculosis and also came to be the best known of a long series of important antibiotics. A second generation of antibiotics was introduced in the 1940s: aureomycin and chloramphenicol. Aureomycin was the best known of the second generation.
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                  <div class="card card-body">
+                  Lithium was discovered in the 19th century for nervous disorders and its possible mood-stabilizing or prophylactic effect; it was cheap and easily produced. As lithium fell out of favor in France, valpromide came into play. This antibiotic was the origin of the drug that eventually created the mood stabilizer category. Valpromide had distinct psychotrophic effects that were of benefit in both the treatment of acute manic states and in the maintenance treatment of manic depression illness. Psychotropics can either be sedative or stimulant; sedatives aim at damping down the extremes of behavior. Stimulants aim at restoring normality by increasing tone. Soon arose the notion of a tranquilizer which was quite different from any sedative or stimulant. The term tranquilizer took over the notions of sedatives and became the dominant term in the West through the 1980s. In Japan, during this time, the term tranquilizer produced the notion of a psyche-stabilizer and the term mood stabilizer vanished.[31]
+
+                    Premarin (conjugated estrogens, introduced in 1942) and Prempro (a combination estrogen-progestin pill, introduced in 1995) dominated the hormone replacement therapy (HRT) during the 1990s. HRT is not a life-saving drug, nor does it cure any disease. HRT has been prescribed to improve one's quality of life.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- collapse -->
+
 
 
             <h4 id="scrollspyHeading5">Classification</h4>
@@ -216,7 +302,20 @@
     <div class="container">
       <hr>
     </div>
+
+    <div class="container">
+      <!-- <a href="contact.html">Contact</a><br> -->
+                
+      <a href="contact.html"  class="btn btn-primary"  role="button" id="contactLinkPage">
+        Contact
+      </a>
+    </div>
+
    
+   
+    <div class="container">
+      <hr>
+    </div>
 
     <footer>
       <div class="container">
@@ -234,10 +333,31 @@
       </div>
 
     <div class="container">
-      <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Medication</a><br>
-      <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Definition</a><br>
-      <a  href="https://en.wikipedia.org/wiki/Medication#History" target="_blank">History</a><br>
-      <a  href="https://en.wikipedia.org/wiki/Medication#Classification" target="_blank">Classification</a>
+      
+      <!-- https://getbootstrap.com/docs/5.2/components/collapse/ -->
+
+    <!-- collapse -->
+    <p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+        Toggle source links
+      </button>
+    </p>
+
+    <div style="min-height: auto">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 70%">
+          <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Medication</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Definition</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Medication#History" target="_blank">History</a><br>
+          <a  href="https://en.wikipedia.org/wiki/History" target="_blank">History</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Medication#Classification" target="_blank">Classification</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Insulin" target="_blank">Insulin</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Antibiotic" target="_blank">Antibiotics</a>
+        </div>
+      </div>
+    </div>
+    <!-- collapse -->
+
     </div>
    
      </footer>
@@ -245,6 +365,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <script src="javascript/index.js"></script>
+    <script src="javascript/toast.js"></script>
+    <script src="javascript/toastAntibiotics.js"></script>
 
   </body>
 </html>

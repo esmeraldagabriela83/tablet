@@ -3,12 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>byPrice.html</title>
+    <title>newPage.html</title>
+
 
       <!--ion icons-->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <!--ion icons-->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!--ion icons-->
 
     <!-- google fonts -->
 
@@ -50,67 +51,31 @@
             </ul>
           </li>
 
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Info</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="index.html">Definition</a></li>
-              <li><a class="dropdown-item" href="index.html">History</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="index.html">Classification</a></li>
-            </ul>
-          </li> -->
-
+         
         </ul>
       </div>
         
       </nav>
 
-      <a href="https://images.pexels.com/photos/3683047/pexels-photo-3683047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  target="_blank">
-        <img src="./images/byPrice.jpg" class="img-fluid" alt="index_image_pills" id="img_index">
-      </a>
+   
 
-      <div class="container my-5">
+<!-- carousel -->carousel from bootstrap
+<!-- https://getbootstrap.com/docs/5.2/components/carousel/ -->
+<!-- carousel -->
 
-        <div id="pills_container_price"  style="
-                                          padding:0.5em ;
-                                          margin:0.5em ;      
-                                          display:flex ; align-items:center ; justify-content:center; flex-wrap:wrap"></div>
-
-        <!-- sort by price-->
-        <button type="button" class="btn btn-warning mb-3 mt-3"  id="sortByPriceBtn">Sort by price</button>
+    
+      <div class="container">
+        <!-- https://web3forms.com/ -->
+   contact form
 
       </div>
 
     <!-- https://getbootstrap.com/docs/5.2/components/scrollspy/#how-it-works -->
 
-    
-
     <div class="container">
-        
       <hr>
-      <label for="nr1">Price one:</label>
-      <div class="input-group mb-3">
-        <input type="number" name="nr1name" id="nr1" class="form-control"  aria-label="nr1" aria-describedby="basic-addon1">
-      </div>
-
-
-      <label for="nr2">Price two:</label>
-      <div class="input-group mb-3">
-        <input type="number" name="nr2name" id="nr2" class="form-control"  aria-label="nr2" aria-describedby="basic-addon1">
-      </div>
-
     </div>
-
-
-
-    <div class="container my-5">
-      <div id="pills_container_betweenPrices"  style="
-                                                padding:0.5em ;
-                                                margin:0.5em ; 
-                                                display:flex ; align-items:center ; justify-content:center; flex-wrap:wrap"></div>
-
-      <button type="button" class="btn btn-secondary mb-3 mt-3"  id="showBetweenUserValues">Show tablets between your prices</button>
-    </div>
+   
 
     <footer>
       <div class="container">
@@ -126,18 +91,41 @@
             </a></div>
         </div>
       </div>
-    
-      <div class="container">
-        <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Source</a>
-      </div>
-     
 
+    <div class="container">
+      
+      <!-- https://getbootstrap.com/docs/5.2/components/collapse/ -->
+
+    <!-- collapse -->
+    <p>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+        Toggle source links
+      </button>
+    </p>
+
+    <div style="min-height: auto">
+      <div class="collapse collapse-horizontal" id="collapseWidthExample">
+        <div class="card card-body" style="width: 70%">
+          <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Medication</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Definition</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Medication#History" target="_blank">History</a><br>
+          <a  href="https://en.wikipedia.org/wiki/History" target="_blank">History</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Medication#Classification" target="_blank">Classification</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Insulin" target="_blank">Insulin</a><br>
+          <a  href="https://en.wikipedia.org/wiki/Antibiotic" target="_blank">Antibiotics</a>
+        </div>
+      </div>
+    </div>
+    <!-- collapse -->
+
+    </div>
+   
      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-    <script src="javascript/byPrice.js"></script>
-    <script src="javascript/priceBetween.js"></script>
+    <script src="javascript/contact.js"></script>
+ 
 
   </body>
 </html>

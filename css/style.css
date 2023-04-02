@@ -27,6 +27,13 @@
       margin-bottom:1em;
       width:1000%;
     }
+
+    #icons{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
   }
 
   @media only screen and (min-width: 420px) and (max-width: 1023px) {
@@ -37,13 +44,18 @@
     .container{
         color:SlateGray;
         font-size: 1.3rem;
-        text-align: center;
+        text-align: left;
     }
 
     hr{
       margin-bottom:1em;
       width:100%;
         }
+
+        #icons{
+          display:flex;
+        }
+
   }
 
   @media only screen and (min-width: 1024px) {
@@ -65,11 +77,16 @@
       width:50%;
       margin-left:0
     }
+
+    #icons{
+      display:flex;
+    }
+
   }
 
 
   /*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-nav , button{
+nav , button , #contactLinkPage{
     box-shadow: 1px 1px 3px #888888;
 }
 
@@ -98,8 +115,10 @@ img {
 
 
 
-
-
+.footerIcons{
+  font-size: 2rem;
+  margin:0.3em;
+}
 
 
 
