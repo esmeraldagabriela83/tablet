@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>newPage.html</title>
+    <title>contact.html</title>
 
 
       <!--ion icons-->
@@ -30,7 +30,7 @@
 
     <!-- https://getbootstrap.com/docs/5.2/components/scrollspy/#how-it-works -->
 
-    <nav id="navbar-example2" class="navbar bg-light px-3 mb-3">
+    <nav id="navbar-example2" class="navbar bg-light px-3">
 
       <div class="container">
         <a class="navbar-brand" href="index.html"><strong>Tablet</strong><br><strong>Project</strong></a>
@@ -59,8 +59,65 @@
 
    
 
-<!-- carousel -->carousel from bootstrap
+<!-- carousel -->
 <!-- https://getbootstrap.com/docs/5.2/components/carousel/ -->
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="https://images.pexels.com/photos/3683094/pexels-photo-3683094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  target="_blank">
+        <img src="./images/carousel1.jpg" class="d-block w-100" alt="antibiotics_img_carousel" style="width:100%">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+          <h5 style="color:#198754 ; text-shadow: 1px 1px 3px #888888;">Antibiotics</h5>  
+        <p style="color:dimgray" class="btn btn-info">
+          An antibiotic is a type of antimicrobial substance active against bacteria. <br>
+          It is the most important type of antibacterial agent for fighting bacterial infections, and antibiotic medications are widely used in the treatment and prevention of such infections.<br>
+          They may either kill or inhibit the growth of bacteria. A limited number of antibiotics also possess antiprotozoal activity.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="https://images.pexels.com/photos/1809341/pexels-photo-1809341.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  target="_blank">
+        <img src="./images/carousel2.jpg" class="d-block w-100" alt="drugs_img_carousel" style="width:100%">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="color:#198754 ; text-shadow: 1px 1px 3px #888888;">Drugs</h5>
+        <p style="color:dimgray" class="btn btn-info">
+          There are many hundreds of thousands of possible drugs.<br>
+          Any chemical substance with biological activity may be considered a drug. This list categorises drugs alphabetically and also by other categorisations.
+        </p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="https://images.pexels.com/photos/5723612/pexels-photo-5723612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"  target="_blank">
+        <img src="./images/carousel3.jpg" class="d-block w-100" alt="insulin_img_carousel" style="width:100%">
+      </a>
+      <div class="carousel-caption d-none d-md-block">
+        <h5 style="color:#198754 ; text-shadow: 1px 1px 3px #888888;">Insulin</h5>
+        <p style="color:dimgray" class="btn btn-info">
+          Insulina este un hormon, secretat de celulele beta ale pancreasului, ce participă la metabolismul glucidelor. <br>
+          Insulina este cel mai important hormon în metabolismul glucidelor. Insulina contribuie în primul rând la micșorarea concentrației glucozei în sânge.<br>
+          Aceasta mărește permeabilitatea membranei celulare pentru glucoză. Insulina are o acțiunea antagonistă glucagonului.
+        </p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
 <!-- carousel -->
 
     
@@ -69,6 +126,8 @@
    contact form
 
       </div>
+
+      <!-- How to send mail from HTML without using JavaScript? | Using Formspree  https://www.youtube.com/watch?v=w9CdrXfjdLw&t=16s -->
 
     <!-- https://getbootstrap.com/docs/5.2/components/scrollspy/#how-it-works -->
 
@@ -106,13 +165,9 @@
     <div style="min-height: auto">
       <div class="collapse collapse-horizontal" id="collapseWidthExample">
         <div class="card card-body" style="width: 70%">
-          <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Medication</a><br>
-          <a  href="https://en.wikipedia.org/wiki/Medication" target="_blank">Definition</a><br>
-          <a  href="https://en.wikipedia.org/wiki/Medication#History" target="_blank">History</a><br>
-          <a  href="https://en.wikipedia.org/wiki/History" target="_blank">History</a><br>
-          <a  href="https://en.wikipedia.org/wiki/Medication#Classification" target="_blank">Classification</a><br>
-          <a  href="https://en.wikipedia.org/wiki/Insulin" target="_blank">Insulin</a><br>
-          <a  href="https://en.wikipedia.org/wiki/Antibiotic" target="_blank">Antibiotics</a>
+          <a href="https://en.wikipedia.org/wiki/Antibiotic" target="_blank">Antibiotics</a>
+          <a href="https://en.wikipedia.org/wiki/Lists_of_drugs" target="_blank">Drugs</a>
+          <a href="https://ro.wikipedia.org/wiki/Insulin%C4%83" target="_blank">Insulin</a>
         </div>
       </div>
     </div>
