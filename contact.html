@@ -163,26 +163,29 @@ body { margin: 0; padding: 0; }
     </div>
     
       <div class="container">
-        <!-- https://web3forms.com/ -->
-   
-        <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_mail -->
 
-          <input type="hidden" name="access_key" value="7ae3556c-871a-4c01-b2b5-be715135759b">
-    
-          <label for="name">Name</label><br>
-          <input type="text" class="form-control" name="name" id="name" required><br>
+      <form action="mailto:esmeraldagabriela83@yahoo.com" method="post" enctype="text/plain">
 
-          <label for="email">Email</label><br>
-          <input type="email" class="form-control" name="email" id="email" required><br>
+        <label for="name">Name:</label><br>
+        <input type="text" name="name" class="form-control" id="name"><br>
 
-          <label for="message">Message</label><br>
-          <textarea class="form-control" name="message" id="message" style="height: 100px" required></textarea><br>
+        <label for="mail">E-mail:</label><br>
+        <input type="text" name="mail" class="form-control" id="mail"><br>
 
-          <input type="hidden" name="redirect" value="https://web3forms.com/success"><br>
-      
-          <button class="btn btn-primary" type="submit" id="submit">Submit Form</button>
-      
-      </form>
+        <label for="comment">Comment:</label><br>
+        <input type="text" name="comment" size="300" style="height:200px" class="form-control" id="comment"><br></br>
+
+        <input type="submit" value="Send" class="btn btn-primary" id="submit"><br><br>
+        <input type="reset" value="Reset" class="btn btn-info" id="reset">
+
+        </form>
+
+        <hr>
+
+        <p id="sentForm"></p>
+        <p id="resetForm"></p>
 
       </div>
 
