@@ -3,6 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--map-->
+  <!-- https://account.mapbox.com/ -->
+  <!-- https://docs.mapbox.com/mapbox-gl-js/example/simple-map/ -->
+
+  <!-- <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script> -->
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+ <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+ <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.js"></script>
+ <link
+   rel="stylesheet"
+   href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.1.0/mapbox-gl-directions.css"
+   type="text/css"
+ />
+
+  <!-- <style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style> -->
+  <!--map-->
+
     <title>contact.html</title>
 
 
@@ -74,7 +97,7 @@
         <img src="./images/carousel1.jpg" class="d-block w-100" alt="antibiotics_img_carousel" style="width:100%">
       </a>
       <div class="carousel-caption d-none d-md-block">
-          <h5 style="color:#198754 ; text-shadow: 1px 1px 3px #888888;">Antibiotics</h5>  
+          <h5 style="color:#0d6efd ; text-shadow: 1px 1px 3px #888888;">Antibiotics</h5>  
         <p style="color:dimgray" class="btn btn-info">
           An antibiotic is a type of antimicrobial substance active against bacteria. <br>
           It is the most important type of antibacterial agent for fighting bacterial infections, and antibiotic medications are widely used in the treatment and prevention of such infections.<br>
@@ -87,7 +110,7 @@
         <img src="./images/carousel2.jpg" class="d-block w-100" alt="drugs_img_carousel" style="width:100%">
       </a>
       <div class="carousel-caption d-none d-md-block">
-        <h5 style="color:#198754 ; text-shadow: 1px 1px 3px #888888;">Drugs</h5>
+        <h5 style="color:#0d6efd ; text-shadow: 1px 1px 3px #888888;">Drugs</h5>
         <p style="color:dimgray" class="btn btn-info">
           There are many hundreds of thousands of possible drugs.<br>
           Any chemical substance with biological activity may be considered a drug. This list categorises drugs alphabetically and also by other categorisations.
@@ -99,7 +122,7 @@
         <img src="./images/carousel3.jpg" class="d-block w-100" alt="insulin_img_carousel" style="width:100%">
       </a>
       <div class="carousel-caption d-none d-md-block">
-        <h5 style="color:#198754 ; text-shadow: 1px 1px 3px #888888;">Insulin</h5>
+        <h5 style="color:#0d6efd ; text-shadow: 1px 1px 3px #888888;">Insulin</h5>
         <p style="color:dimgray" class="btn btn-info">
           Insulina este un hormon, secretat de celulele beta ale pancreasului, ce participă la metabolismul glucidelor. <br>
           Insulina este cel mai important hormon în metabolismul glucidelor. Insulina contribuie în primul rând la micșorarea concentrației glucozei în sânge.<br>
@@ -120,16 +143,60 @@
 
 <!-- carousel -->
 
+<!-- map -->
+
+  <!--map-->
+  <div class="container">
+    <h3 class="primary my-3">Find us on the map</h3>
+
+    <div id="makeMap">
+      <div id='map'></div>
+    </div>
+
+  </div>
+  <!--map-->
+
+<!-- map -->
+
+    <div class="container">
+      <hr>
+    </div>
     
       <div class="container">
         <!-- https://web3forms.com/ -->
-   contact form
+   
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="7ae3556c-871a-4c01-b2b5-be715135759b">
+    
+          <label for="name">Name</label><br>
+          <input type="text" class="form-control" name="name" id="name" required><br>
+
+          <label for="email">Email</label><br>
+          <input type="email" class="form-control" name="email" id="email" required><br>
+
+          <label for="message">Message</label><br>
+          <textarea class="form-control" name="message" id="message" style="height: 100px" required></textarea><br>
+
+          <input type="hidden" name="redirect" value="https://web3forms.com/success"><br>
+      
+          <button class="btn btn-primary" type="submit" id="submit">Submit Form</button>
+      
+      </form>
 
       </div>
 
-      <!-- How to send mail from HTML without using JavaScript? | Using Formspree  https://www.youtube.com/watch?v=w9CdrXfjdLw&t=16s -->
+      <!-- 
 
-    <!-- https://getbootstrap.com/docs/5.2/components/scrollspy/#how-it-works -->
+        wordpress:
+        Web3forms - cheap, light and fast contact form for your website
+
+        https://getbootstrap.com/docs/5.2/forms/validation/#custom-styles
+        
+        How to send mail from HTML without using JavaScript? | Using Formspree  
+        https://www.youtube.com/watch?v=w9CdrXfjdLw&t=16s -->
+
+   
 
     <div class="container">
       <hr>
@@ -178,6 +245,8 @@
      </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <script src="javascript/map.js"></script>
 
     <script src="javascript/contact.js"></script>
  

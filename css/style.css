@@ -120,7 +120,49 @@ img {
   margin:0.3em;
 }
 
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+a.link_btn{
+  box-shadow: 1px 1px 3px #888888;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 
 
+@media only screen and (max-width: 959px) {
+  #makeMap{
+    position: relative;
+    height: 15em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: floralwhite;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  #makeMap{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: floralwhite; */
+  }
+}
+
+#map {
+   position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  /* margin: 0 1em; */
+box-shadow: 1px 1px 3px #888888;
+ }
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------*/
